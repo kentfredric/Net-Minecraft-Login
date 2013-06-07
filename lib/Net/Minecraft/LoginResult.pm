@@ -6,7 +6,12 @@ package Net::Minecraft::LoginResult {
   # ABSTRACT: Result info for a Minecraft Login.
 
   use Moo;
+
+  with 'Net::Minecraft::Role::LoginResult';
+
   use Params::Validate qw( validate SCALAR );
+
+  sub is_success { return 1 }
 
 =attr current_version
 

@@ -6,9 +6,13 @@ package Net::Minecraft::LoginFailure {
   # ABSTRACT: Result info for a Minecraft Login.
 
   use Moo;
+  with 'Net::Minecraft::Role::LoginResult';
+
   use Carp qw( confess );
   use Params::Validate qw( validate SCALAR );
   use overload q{""} => 'as_string';
+
+  sub is_success { return; }
 
 =head1 CONSTRUCTOR ARGUMENTS
 
