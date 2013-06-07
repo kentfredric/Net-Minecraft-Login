@@ -9,9 +9,9 @@ package Net::Minecraft::Login {
 
 {
     "namespace":"Net::Minecraft::Login",
-    "inherits":"Moo::Object"
+    "inherits":"Moo::Object",
+    "does":"Net::Minecraft::Role::HTTP"
 }
-
 
 =end MetaPOD::JSON
 
@@ -39,9 +39,9 @@ Note, it presently does no explict session stuff, only performs the basic HTTP R
 =cut
 
   use Moo;
+  with 'Net::Minecraft::Role::HTTP';
   use Carp qw( confess );
   use Scalar::Util qw( blessed );
-  use HTTP::Tiny;
   use Params::Validate qw( validate SCALAR );
   use Net::Minecraft::LoginResult;
   use Net::Minecraft::LoginFailure;
@@ -59,54 +59,6 @@ and are offered only to give leverage to strange usecases ( and tests )
     version      => 14, # IN THE FUTURE!
   );
 
-=carg user_agent
-
-The User Agent to self-describe over HTTP
-
-  type    : String
-  default : "Net::Minecraft::Login/" . VERSION
-
-=attr user_agent
-
-=cut
-
-  has user_agent => (
-    is      => rwp =>,
-    lazy    => 1,
-    default => sub {
-      my $class = $_[0];
-      $class = blessed($class) if blessed($class);
-      my $version = $class->VERSION;
-      $version = 'DEVEL' if not defined $version;
-      return sprintf q{%s/%s}, $class, $version;
-    },
-  );
-
-=carg http_headers
-
-Standard Headers that will be injected in each request
-
-  type    : Hash[ string => string ]
-  default : { 'Content-Type' => 'application/x-www-form-urlencoded' }
-
-=attr http_headers
-
-=cut
-
-  has http_headers => ( is => rwp =>, lazy => 1, default => sub { { 'Content-Type' => 'application/x-www-form-urlencoded' } }, );
-
-=carg http_engine
-
-Low-Level HTTP Transfer Agent.
-
-  type    : Object[ =~ HTTP::Tiny ]
-  default : An HTTP::Tiny instance.
-
-=attr http_engine
-
-=cut
-
-  has http_engine => ( is => rwp =>, lazy => 1, default => sub { return HTTP::Tiny->new( agent => $_[0]->user_agent ) }, );
 
 =carg login_server
 

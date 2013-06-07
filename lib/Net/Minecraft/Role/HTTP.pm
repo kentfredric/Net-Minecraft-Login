@@ -1,0 +1,73 @@
+use v5.16;
+use warnings;
+ 
+package Net::Minecraft::Role::HTTP {
+
+    # ABSTRACT: Base class for minecrafty http things. 
+
+=begin MetaPOD::JSON v1.0.0
+
+{
+    "namespace":"Net::Minecraft::Role::HTTP"
+}
+
+=end MetaPOD::JSON
+
+=cut
+
+    use Moo::Role;  
+    use HTTP::Tiny;
+    use Scalar::Util qw( blessed );
+
+=carg user_agent
+
+The User Agent to self-describe over HTTP
+
+  type    : String
+  default : "Net::Minecraft::Login/" . VERSION
+
+=attr user_agent
+
+=cut
+
+  has user_agent => (
+    is      => rwp =>,
+    lazy    => 1,
+    default => sub {
+      my $class = $_[0];
+      $class = blessed($class) if blessed($class);
+      my $version = $class->VERSION;
+      $version = 'DEVEL' if not defined $version;
+      return sprintf q{%s/%s}, $class, $version;
+    },
+  );
+
+=carg http_headers
+
+Standard Headers that will be injected in each request
+
+  type    : Hash[ string => string ]
+  default : { 'Content-Type' => 'application/x-www-form-urlencoded' }
+
+=attr http_headers
+
+=cut
+
+  has http_headers => ( is => rwp =>, lazy => 1, default => sub { { 'Content-Type' => 'application/x-www-form-urlencoded' } }, );
+
+=carg http_engine
+
+Low-Level HTTP Transfer Agent.
+
+  type    : Object[ =~ HTTP::Tiny ]
+  default : An HTTP::Tiny instance.
+
+=attr http_engine
+
+=cut
+
+  has http_engine => ( is => rwp =>, lazy => 1, default => sub { return HTTP::Tiny->new( agent => $_[0]->user_agent ) }, );
+
+}
+
+1;
