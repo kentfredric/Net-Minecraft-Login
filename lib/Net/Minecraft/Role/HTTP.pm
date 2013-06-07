@@ -1,6 +1,6 @@
 use v5.16;
 use warnings;
- 
+
 package Net::Minecraft::Role::HTTP {
 BEGIN {
   $Net::Minecraft::Role::HTTP::AUTHORITY = 'cpan:KENTNL';
@@ -11,12 +11,12 @@ BEGIN {
 }
 
 
-    # ABSTRACT: Base class for minecrafty http things. 
+  # ABSTRACT: Base class for minecrafty http things.
 
 
-    use Moo::Role;  
-    use HTTP::Tiny;
-    use Scalar::Util qw( blessed );
+  use Moo::Role;
+  use HTTP::Tiny;
+  use Scalar::Util qw( blessed );
 
 
   has user_agent => (
@@ -49,13 +49,22 @@ __END__
 
 =head1 NAME
 
-Net::Minecraft::Role::HTTP - Base class for minecrafty http things. 
+Net::Minecraft::Role::HTTP - Base class for minecrafty http things.
 
 =head1 VERSION
 
 version 0.001001
 
 =head1 CONSTRUCTOR ARGUMENTS
+
+This section describes arguments that may be optionally passed to L<<< C<< ->new() >>|/new >>>, but as of the time of this writing, none are explicitly required,
+and are offered only to give leverage to strange usecases ( and tests )
+
+  my $instance = _SOME_CLASS_->new(
+    user_agent   => ... ,
+    http_headers => { ... },
+    http_engine  => HTTP::Tiny->new(),
+  );
 
 =head2 user_agent
 
