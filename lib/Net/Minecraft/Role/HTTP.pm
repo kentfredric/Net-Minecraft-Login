@@ -1,9 +1,9 @@
 use v5.16;
 use warnings;
- 
+
 package Net::Minecraft::Role::HTTP {
 
-    # ABSTRACT: Base class for minecrafty http things. 
+  # ABSTRACT: Base class for minecrafty http things.
 
 =begin MetaPOD::JSON v1.0.0
 
@@ -15,9 +15,20 @@ package Net::Minecraft::Role::HTTP {
 
 =cut
 
-    use Moo::Role;  
-    use HTTP::Tiny;
-    use Scalar::Util qw( blessed );
+  use Moo::Role;
+  use HTTP::Tiny;
+  use Scalar::Util qw( blessed );
+
+=head1 CONSTRUCTOR ARGUMENTS
+
+This section describes arguments that may be optionally passed to L<<< C<< ->new() >>|/new >>>, but as of the time of this writing, none are explicitly required,
+and are offered only to give leverage to strange usecases ( and tests )
+
+  my $instance = _SOME_CLASS_->new(
+    user_agent   => ... ,
+    http_headers => { ... },
+    http_engine  => HTTP::Tiny->new(),
+  );
 
 =carg user_agent
 

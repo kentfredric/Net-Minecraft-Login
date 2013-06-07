@@ -48,7 +48,7 @@ Note, it presently does no explict session stuff, only performs the basic HTTP R
 
 =head1 CONSTRUCTOR ARGUMENTS
 
-This second describes arguments that may be optionally passed to L<<< C<< ->new() >>|/new >>>, but as of the time of this writing, none are explicitly required,
+This section describes arguments that may be optionally passed to L<<< C<< ->new() >>|/new >>>, but as of the time of this writing, none are explicitly required,
 and are offered only to give leverage to strange usecases ( and tests )
 
   my $instance = Net::Minecraft::Login->new(
@@ -59,6 +59,7 @@ and are offered only to give leverage to strange usecases ( and tests )
     version      => 14, # IN THE FUTURE!
   );
 
+Additional Constructor arguments can also be found in L<< C<Net::Minecraft::Role::HTTP>|Net::Minecraft::Role::HTTP >>
 
 =carg login_server
 
