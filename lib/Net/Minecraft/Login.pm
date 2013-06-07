@@ -2,6 +2,14 @@ use v5.16;
 use warnings;
 
 package Net::Minecraft::Login {
+BEGIN {
+  $Net::Minecraft::Login::AUTHORITY = 'cpan:KENTNL';
+}
+
+{
+  $Net::Minecraft::Login::VERSION = '0.001001';
+}
+
 
   # ABSTRACT: Basic implementation of the Minecraft Login Protocol.
 
@@ -50,12 +58,6 @@ package Net::Minecraft::Login {
     return Net::Minecraft::LoginResult->parse( $result->{content} );
   }
 };
-BEGIN {
-  $Net::Minecraft::Login::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $Net::Minecraft::Login::VERSION = '0.001001';
-}
 1;
 
 __END__

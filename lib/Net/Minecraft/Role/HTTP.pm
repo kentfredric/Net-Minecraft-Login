@@ -2,6 +2,14 @@ use v5.16;
 use warnings;
  
 package Net::Minecraft::Role::HTTP {
+BEGIN {
+  $Net::Minecraft::Role::HTTP::AUTHORITY = 'cpan:KENTNL';
+}
+
+{
+  $Net::Minecraft::Role::HTTP::VERSION = '0.001001';
+}
+
 
     # ABSTRACT: Base class for minecrafty http things. 
 
@@ -32,12 +40,6 @@ package Net::Minecraft::Role::HTTP {
 }
 
 1;
-BEGIN {
-  $Net::Minecraft::Role::HTTP::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $Net::Minecraft::Role::HTTP::VERSION = '0.001001';
-}
 
 __END__
 

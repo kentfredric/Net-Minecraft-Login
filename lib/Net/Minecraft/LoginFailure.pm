@@ -2,6 +2,14 @@ use v5.16;
 use warnings;
 
 package Net::Minecraft::LoginFailure {
+BEGIN {
+  $Net::Minecraft::LoginFailure::AUTHORITY = 'cpan:KENTNL';
+}
+
+{
+  $Net::Minecraft::LoginFailure::VERSION = '0.001001';
+}
+
 
   # ABSTRACT: Result info for a Minecraft Login.
 
@@ -36,12 +44,6 @@ package Net::Minecraft::LoginFailure {
     confess q[parameter is not a scalar] if ref $_[0];
   }
 };
-BEGIN {
-  $Net::Minecraft::LoginFailure::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $Net::Minecraft::LoginFailure::VERSION = '0.001001';
-}
 
 1;
 

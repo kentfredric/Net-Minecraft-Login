@@ -2,6 +2,14 @@ use v5.16;
 use warnings;
 
 package Net::Minecraft::LoginResult {
+BEGIN {
+  $Net::Minecraft::LoginResult::AUTHORITY = 'cpan:KENTNL';
+}
+
+{
+  $Net::Minecraft::LoginResult::VERSION = '0.001001';
+}
+
 
   # ABSTRACT: Result info for a Minecraft Login.
 
@@ -29,12 +37,6 @@ package Net::Minecraft::LoginResult {
   }
 
 };
-BEGIN {
-  $Net::Minecraft::LoginResult::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $Net::Minecraft::LoginResult::VERSION = '0.001001';
-}
 
 1;
 

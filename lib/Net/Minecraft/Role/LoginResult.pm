@@ -2,6 +2,14 @@ use v5.16;
 use warnings;
 
 package Net::Minecraft::Role::LoginResult {
+BEGIN {
+  $Net::Minecraft::Role::LoginResult::AUTHORITY = 'cpan:KENTNL';
+}
+
+{
+  $Net::Minecraft::Role::LoginResult::VERSION = '0.001001';
+}
+
 
   # ABSTRACT: Generic login result role
 
@@ -12,12 +20,6 @@ package Net::Minecraft::Role::LoginResult {
 }
 
 1;
-BEGIN {
-  $Net::Minecraft::Role::LoginResult::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $Net::Minecraft::Role::LoginResult::VERSION = '0.001001';
-}
 
 __END__
 
