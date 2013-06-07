@@ -59,6 +59,7 @@ eval { $v .= pmver('Moo::Role','any version') };
 eval { $v .= pmver('Net::Minecraft::Role::HTTP','any version') };
 eval { $v .= pmver('Params::Validate','any version') };
 eval { $v .= pmver('Pod::Coverage::TrustPod','any version') };
+eval { $v .= pmver('Pod::Weaver::Section::AllowOverride','any version') };
 eval { $v .= pmver('Scalar::Util','any version') };
 eval { $v .= pmver('Test::CPAN::Changes','0.19') };
 eval { $v .= pmver('Test::CPAN::Meta','any version') };

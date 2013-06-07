@@ -59,6 +59,7 @@ x_BuiltWith:
     Net::Minecraft::Role::HTTP: 'NA(possibly not installed)'
     Params::Validate: 1.07
     Pod::Coverage::TrustPod: 0.100002
+    Pod::Weaver::Section::AllowOverride: 0.04
     Scalar::Util: 1.27
     Test::CPAN::Changes: 0.20
     Test::CPAN::Meta: 0.23
@@ -293,6 +294,14 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::Twitter
       name: '@Author::KENTNL/Twitter'
       version: 0.020
+    -
+      class: Dist::Zilla::Plugin::Prereqs
+      config:
+        Dist::Zilla::Plugin::Prereqs:
+          phase: develop
+          type: requires
+      name: DevelopRequires
+      version: 4.300034
     -
       class: Dist::Zilla::Plugin::Prereqs
       config:
