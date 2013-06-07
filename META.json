@@ -45,9 +45,9 @@
       "runtime" : {
          "requires" : {
             "Carp" : "0",
+            "HTTP::Tiny" : "0",
             "Moo" : "0",
             "Moo::Role" : "0",
-            "Net::Minecraft::Role::HTTP" : "0",
             "Params::Validate" : "0",
             "Scalar::Util" : "0",
             "overload" : "0",
@@ -78,6 +78,10 @@
          "file" : "lib/Net/Minecraft/LoginResult.pm",
          "version" : "v0.1.0"
       },
+      "Net::Minecraft::Role::HTTP" : {
+         "file" : "lib/Net/Minecraft/Role/HTTP.pm",
+         "version" : "v0.1.0"
+      },
       "Net::Minecraft::Role::LoginResult" : {
          "file" : "lib/Net/Minecraft/Role/LoginResult.pm",
          "version" : "v0.1.0"
@@ -103,10 +107,10 @@
          "Dist::Zilla::PluginBundle::Author::KENTNL::Lite" : "NA(possibly not installed)",
          "File::Find" : "1.23",
          "File::Temp" : "0.2301",
+         "HTTP::Tiny" : "0.029",
          "Module::Build" : "0.4005",
          "Moo" : "1.002",
          "Moo::Role" : "NA(undef)",
-         "Net::Minecraft::Role::HTTP" : "NA(possibly not installed)",
          "Params::Validate" : "1.07",
          "Pod::Coverage::TrustPod" : "0.100002",
          "Pod::Weaver::Section::AllowOverride" : "0.04",

@@ -12,6 +12,7 @@ layout/self_structure.png
 lib/Net/Minecraft/Login.pm
 lib/Net/Minecraft/LoginFailure.pm
 lib/Net/Minecraft/LoginResult.pm
+lib/Net/Minecraft/Role/HTTP.pm
 lib/Net/Minecraft/Role/LoginResult.pm
 perlcritic.rc
 t/00-compile.t
