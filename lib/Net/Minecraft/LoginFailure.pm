@@ -14,6 +14,16 @@ package Net::Minecraft::LoginFailure {
 
   sub is_success { return; }
 
+=begin MetaPOD::JSON v1.0.0
+
+{
+    "namespace":"Net::Minecraft::LoginFailure",
+    "inherits":"Moo::Object",
+    "does":"Net::Minecraft::Role::LoginResult"
+}
+
+=end MetaPOD::JSON
+
 =head1 CONSTRUCTOR ARGUMENTS
 
 	my $error = Net::Minecraft::LoginFailure->new(

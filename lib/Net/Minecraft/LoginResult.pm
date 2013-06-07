@@ -13,6 +13,16 @@ package Net::Minecraft::LoginResult {
 
   sub is_success { return 1 }
 
+=begin MetaPOD::JSON v1.0.0
+
+{
+    "namespace":"Net::Minecraft::LoginResult",
+    "inherits":"Moo::Object",
+    "does":"Net::Minecraft::Role::LoginResult"
+}
+
+=end MetaPOD::JSON
+
 =attr current_version
 
 The timestamp in UnixTime of the most recent Minecraft version ( the game itself, not the launcher )

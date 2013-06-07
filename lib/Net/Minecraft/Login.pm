@@ -5,6 +5,17 @@ package Net::Minecraft::Login {
 
   # ABSTRACT: Basic implementation of the Minecraft Login Protocol.
 
+=begin MetaPOD::JSON v1.0.0
+
+{
+    "namespace":"Net::Minecraft::Login",
+    "inherits":"Moo::Object"
+}
+
+
+=end MetaPOD::JSON
+
+
 =head1 DESCRIPTION
 
 This is a basic implementation of the Minecraft Login protocol as described at L<http://wiki.vg/Session#Login>
