@@ -1,0 +1,121 @@
+NAME
+    Net::Minecraft::Login - Basic implementation of the Minecraft Login
+    Protocol.
+
+VERSION
+    version 0.001000
+
+DESCRIPTION
+    This is a basic implementation of the Minecraft Login protocol as
+    described at <http://wiki.vg/Session#Login>
+
+      use Net::Minecraft::Login;
+
+      my $ua = Net::Minecraft::Login->new();
+
+      my $result = $ua->login(
+        user => 'Bob',
+        password => 'secret',
+      );
+      if( $result->isa('Net::Minecraft::LoginFailure') ){
+        die $result;
+      }
+      say "Login for user " . $result->user . " succeeded";
+
+    Note, it presently does no explict session stuff, only performs the
+    basic HTTP Request and returns the response as an object.
+
+CONSTRUCTOR ARGUMENTS
+    This second describes arguments that may be optionally passed to
+    "->new()", but as of the time of this writing, none are explicitly
+    required, and are offered only to give leverage to strange usecases (
+    and tests )
+
+      my $instance = Net::Minecraft::Login->new(
+        user_agent   => ... ,
+        http_headers => { ... },
+        http_engine  => HTTP::Tiny->new(),
+        login_server => 'https://somewhere.else.org/'
+        version      => 14, # IN THE FUTURE!
+      );
+
+  user_agent
+    The User Agent to self-describe over HTTP
+
+      type    : String
+      default : "Net::Minecraft::Login/" . VERSION
+
+  http_headers
+    Standard Headers that will be injected in each request
+
+      type    : Hash[ string => string ]
+      default : { 'Content-Type' => 'application/x-www-form-urlencoded' }
+
+  http_engine
+    Low-Level HTTP Transfer Agent.
+
+      type    : Object[ =~ HTTP::Tiny ]
+      default : An HTTP::Tiny instance.
+
+  login_server
+    HTTP Address to authenticate with.
+
+      type  : String
+      default : https://login.minecraft.net/
+
+  version
+    "Client" version.
+
+      type  : String
+      default : 13
+
+    This field indicates the version of the "Launcher". Minecraft may at
+    some future time produce an updated launcher, and indicate that this
+    specified version is out of date.
+
+    Mojang Minecraft Launchers will be required to download a newer version,
+    and users of Net::Minecraft::Login will either
+
+    a) Be required to update to a newer Net::Minecraft::Login that supports
+    the newer version and changes that implies
+    b) Assuming no Login Protocol Changes, only have to specify "version =>"
+    either to the constructor, or as an argument to "login"
+
+METHODS
+  login
+      signature: { user => String , password => String, version? => String }
+      return   : Any( Net::Minecraft::LoginResult , Net::Minecraft::LoginFailure )
+
+      my $result = $nmcl->login(
+        user   => 'notch',
+        password => 'jellybean',
+      );
+
+      if( $result->isa('Net::Minecraft::LoginFailure') ){
+        say "$result";
+      } else {
+        say "Logged in!";
+      }
+
+    See "::LoginFailure" and "::LoginResult"
+
+ATTRIBUTES
+  user_agent
+  http_headers
+  http_engine
+  login_server
+  version
+PRIVATE METHODS
+  _do_request
+      signature : ( String $base_uri, Hash[ String => String ] $parameters , Hash[ String => Any ] $config )
+      return    : Hash[ String => String ]
+
+AUTHOR
+    Kent Fredric <kentnl@cpan.org>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2013 by Kent Fredric <kentnl@cpan.org>.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
