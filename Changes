@@ -1,5 +1,37 @@
 Release history for Net-Minecraft-Login
 
 {{$NEXT}}
+ [Dependencies::Added / develop requires]
+ - Pod::Weaver::Section::AllowOverride
+ - Test::CPAN::Changes 0.19
+
+ [Dependencies::Added / runtime requires]
+ - Moo::Role
+
+ [Dependencies::Changed / build requires]
+ - Module::Build 0.4003 → 0.4005
+
+ [Dependencies::Changed / configure requires]
+ - Module::Build 0.4003 → 0.4005
+
+ [Dependencies::Changed / develop suggests]
+ - Dist::Zilla::PluginBundle::Author::KENTNL v1.6.0 → v1.7.3
+
+ [Documentation]
+ - Added README.mkdn
+ - added layout/*
+
+ [Internals]
+ - Net::Minecraft::Login has internal HTTP attributes extracted to a role
+ - Net::Minecraft::Login{Failure,Result} are both Role::LoginResult
+
+ [Modules::New]
+ - Net::Minecraft::Role::HTTP
+ - Net::Minecraft::Role::LoginResult
+
+ [Packaging]
+ - uses MB 0.4004 test_requires
+
+0.001000 2013-01-06T18:34:58Z
  - First version.
 
