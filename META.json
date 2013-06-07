@@ -68,23 +68,23 @@
    "provides" : {
       "Net::Minecraft::Login" : {
          "file" : "lib/Net/Minecraft/Login.pm",
-         "version" : "v0.1.0"
+         "version" : "0.001001"
       },
       "Net::Minecraft::LoginFailure" : {
          "file" : "lib/Net/Minecraft/LoginFailure.pm",
-         "version" : "v0.1.0"
+         "version" : "0.001001"
       },
       "Net::Minecraft::LoginResult" : {
          "file" : "lib/Net/Minecraft/LoginResult.pm",
-         "version" : "v0.1.0"
+         "version" : "0.001001"
       },
       "Net::Minecraft::Role::HTTP" : {
          "file" : "lib/Net/Minecraft/Role/HTTP.pm",
-         "version" : "v0.1.0"
+         "version" : "0.001001"
       },
       "Net::Minecraft::Role::LoginResult" : {
          "file" : "lib/Net/Minecraft/Role/LoginResult.pm",
-         "version" : "v0.1.0"
+         "version" : "0.001001"
       }
    },
    "release_status" : "stable",
@@ -99,7 +99,7 @@
          "web" : "https://github.com/kentfredric/Net-Minecraft-Login"
       }
    },
-   "version" : "0.1.0",
+   "version" : "0.001001",
    "x_BuiltWith" : {
       "modules" : {
          "Carp" : "1.29",

@@ -3,7 +3,7 @@ NAME
     Protocol.
 
 VERSION
-    version 0.1.0
+    version 0.001001
 
 DESCRIPTION
     This is a basic implementation of the Minecraft Login protocol as
