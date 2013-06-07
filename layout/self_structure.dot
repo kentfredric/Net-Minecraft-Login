@@ -1,0 +1,15 @@
+digraph test {
+	rankdir=LR;
+	ratio="fill";
+	node [shape="box"];
+	node1 [label="Net::Minecraft::Login"];
+	node2 [label="Moo::Object"];
+	node3 [label="Net::Minecraft::LoginFailure"];
+	node4 [label="Net::Minecraft::Role::LoginResult"];
+	node5 [label="Net::Minecraft::LoginResult"];
+	node1 -> node2 [color="red", dir="forward", label="inherits"];
+	node3 -> node2 [color="red", dir="forward", label="inherits"];
+	node3 -> node4 [color="blue", dir="forward", label="does"];
+	node5 -> node2 [color="red", dir="forward", label="inherits"];
+	node5 -> node4 [color="blue", dir="forward", label="does"];
+}
