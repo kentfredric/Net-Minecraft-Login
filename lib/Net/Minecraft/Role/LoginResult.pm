@@ -3,21 +3,21 @@ use warnings;
 
 package Net::Minecraft::Role::LoginResult {
 
-  # ABSTRACT: Generic login result role
+  # ABSTRACT: Generic Login result role
 
 
   use Moo::Role;
 
   requires 'is_success';
-}
-
-1;
+};
 BEGIN {
   $Net::Minecraft::Role::LoginResult::AUTHORITY = 'cpan:KENTNL';
 }
 {
   $Net::Minecraft::Role::LoginResult::VERSION = '0.001001';
 }
+
+1;
 
 __END__
 
@@ -27,7 +27,7 @@ __END__
 
 =head1 NAME
 
-Net::Minecraft::Role::LoginResult - Generic login result role
+Net::Minecraft::Role::LoginResult - Generic Login result role
 
 =head1 VERSION
 

@@ -3,7 +3,7 @@ use warnings;
 
 package Net::Minecraft::Role::HTTP {
 
-  # ABSTRACT: Base class for minecraft C<HTTP> things.
+  # ABSTRACT: Base class for Minecraft C<HTTP> things.
 
 
   use Moo::Role;
@@ -47,7 +47,7 @@ __END__
 
 =head1 NAME
 
-Net::Minecraft::Role::HTTP - Base class for minecraft C<HTTP> things.
+Net::Minecraft::Role::HTTP - Base class for Minecraft C<HTTP> things.
 
 =head1 VERSION
 
