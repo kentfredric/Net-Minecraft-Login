@@ -1,4 +1,4 @@
-0.001001
+0.002000
  [Added / develop requires]
  - Dist::Zilla::Plugin::Authority 1.006
  - Dist::Zilla::Plugin::AutoPrereqs
