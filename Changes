@@ -1,6 +1,8 @@
 Release history for Net-Minecraft-Login
 
 {{$NEXT}}
+
+0.002000 2013-12-31T05:23:58Z
  [00 Minor]
  - Component Refactoring
  - Note: This is still only supporing the legacy pre-yggdrasil api
