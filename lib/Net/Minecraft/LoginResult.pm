@@ -55,11 +55,11 @@ version 0.001001
 
 =head1 METHODS
 
-=head2 is_success
+=head2 C<is_success>
 
 Always returns a truth value for instance of this class.
 
-=head2 parse
+=head2 C<parse>
 
 Inflate a L<< C<::LoginResult>|Net::Minecraft::LoginResult >> from a content string supplied by the server.
 
@@ -73,23 +73,23 @@ Which we simply split on ':' and store in the respective fields.
 
 =head1 ATTRIBUTES
 
-=head2 current_version
+=head2 C<current_version>
 
 The timestamp in UnixTime of the most recent Minecraft version ( the game itself, not the launcher )
 
-=head2 download_ticket
+=head2 C<download_ticket>
 
 Will always return "deprecated" as this feature is no longer valid.
 
-=head2 user
+=head2 C<user>
 
 The Case Corrected form of the supplied user name.
 
-=head2 session_id
+=head2 C<session_id>
 
 A Unique Session Identifier
 
-=head2 unique_id
+=head2 C<unique_id>
 
 A (presently unused) unique User Identifier.
 
