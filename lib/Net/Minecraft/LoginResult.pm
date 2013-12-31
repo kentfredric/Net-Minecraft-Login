@@ -2,19 +2,17 @@ use v5.16;
 use warnings;
 
 package Net::Minecraft::LoginResult {
-BEGIN {
-  $Net::Minecraft::LoginResult::AUTHORITY = 'cpan:KENTNL';
-}
-
-{
-  $Net::Minecraft::LoginResult::VERSION = '0.001000';
-}
-
 
   # ABSTRACT: Result info for a Minecraft Login.
 
   use Moo;
+
+  with 'Net::Minecraft::Role::LoginResult';
+
   use Params::Validate qw( validate SCALAR );
+
+
+  sub is_success { return 1 }
 
 
   has current_version => ( is => rwp =>, required => 1 );
@@ -32,6 +30,12 @@ BEGIN {
   }
 
 };
+BEGIN {
+  $Net::Minecraft::LoginResult::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $Net::Minecraft::LoginResult::VERSION = '0.002000';
+}
 
 1;
 
@@ -39,7 +43,7 @@ __END__
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
@@ -47,11 +51,15 @@ Net::Minecraft::LoginResult - Result info for a Minecraft Login.
 
 =head1 VERSION
 
-version 0.001000
+version 0.002000
 
 =head1 METHODS
 
-=head2 parse
+=head2 C<is_success>
+
+Always returns a truth value for instance of this class.
+
+=head2 C<parse>
 
 Inflate a L<< C<::LoginResult>|Net::Minecraft::LoginResult >> from a content string supplied by the server.
 
@@ -65,25 +73,37 @@ Which we simply split on ':' and store in the respective fields.
 
 =head1 ATTRIBUTES
 
-=head2 current_version
+=head2 C<current_version>
 
-The timestamp in UnixTime of the most recent Minecraft version ( the game itself, not the launcher )
+The C<timestamp> in C<UnixTime> of the most recent Minecraft version ( the game itself, not the launcher )
 
-=head2 download_ticket
+=head2 C<download_ticket>
 
 Will always return "deprecated" as this feature is no longer valid.
 
-=head2 user
+=head2 C<user>
 
 The Case Corrected form of the supplied user name.
 
-=head2 session_id
+=head2 C<session_id>
 
 A Unique Session Identifier
 
-=head2 unique_id
+=head2 C<unique_id>
 
 A (presently unused) unique User Identifier.
+
+=begin MetaPOD::JSON v1.1.0
+
+{
+    "namespace":"Net::Minecraft::LoginResult",
+    "inherits":"Moo::Object",
+    "does":"Net::Minecraft::Role::LoginResult",
+    "interface":"class"
+}
+
+
+=end MetaPOD::JSON
 
 =head1 AUTHOR
 
