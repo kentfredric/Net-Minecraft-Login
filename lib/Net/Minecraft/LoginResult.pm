@@ -93,12 +93,13 @@ A Unique Session Identifier
 
 A (presently unused) unique User Identifier.
 
-=begin MetaPOD::JSON v1.0.0
+=begin MetaPOD::JSON v1.1.0
 
 {
     "namespace":"Net::Minecraft::LoginResult",
     "inherits":"Moo::Object",
-    "does":"Net::Minecraft::Role::LoginResult"
+    "does":"Net::Minecraft::Role::LoginResult",
+    "interface":"class"
 }
 
 

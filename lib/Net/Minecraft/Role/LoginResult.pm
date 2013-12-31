@@ -33,10 +33,11 @@ Net::Minecraft::Role::LoginResult - Generic Login result role
 
 version 0.001001
 
-=begin MetaPOD::JSON v1.0.0
+=begin MetaPOD::JSON v1.1.0
 
 {
-    "namespace":"Net::Minecraft::Role::LoginResult"
+    "namespace":"Net::Minecraft::Role::LoginResult",
+    "interface":"role"
 }
 
 

@@ -92,12 +92,13 @@ Always returns a false value for instances of this class.
 	overload: for ""
 	returns a string description of this login failure.
 
-=begin MetaPOD::JSON v1.0.0
+=begin MetaPOD::JSON v1.1.0
 
 {
     "namespace":"Net::Minecraft::LoginFailure",
     "inherits":"Moo::Object",
-    "does":"Net::Minecraft::Role::LoginResult"
+    "does":"Net::Minecraft::Role::LoginResult",
+    "interface":"class"
 }
 
 

@@ -93,10 +93,11 @@ Low-Level HTTP Transfer Agent.
 
 =head2 C<http_engine>
 
-=begin MetaPOD::JSON v1.0.0
+=begin MetaPOD::JSON v1.1.0
 
 {
-    "namespace":"Net::Minecraft::Role::HTTP"
+    "namespace":"Net::Minecraft::Role::HTTP",
+    "interface":"role"
 }
 
 

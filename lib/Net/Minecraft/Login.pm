@@ -165,12 +165,13 @@ See L<< C<::LoginFailure>|Net::Minecraft::LoginFailure >> and L<< C<::LoginResul
   signature : ( String $base_uri, Hash[ String => String ] $parameters , Hash[ String => Any ] $config )
   return    : Hash[ String => String ]
 
-=begin MetaPOD::JSON v1.0.0
+=begin MetaPOD::JSON v1.1.0
 
 {
     "namespace":"Net::Minecraft::Login",
     "inherits":"Moo::Object",
-    "does":"Net::Minecraft::Role::HTTP"
+    "does":"Net::Minecraft::Role::HTTP",
+    "interface":"class"
 }
 
 
