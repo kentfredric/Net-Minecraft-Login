@@ -3,6 +3,7 @@ matrix:
   allow_failures:
     - perl: "5.8"
     - perl: "5.10"
+    - perl: "5.12"
     - perl: "5.14"
     - env: STERILIZE_ENV=0 RELEASE_TESTING=1 AUTHOR_TESTING=1
     - env: STERILIZE_ENV=0 DEVELOPER_DEPS=1
