@@ -1,6 +1,10 @@
 Release history for Net-Minecraft-Login
 
 {{$NEXT}}
+ [00 Minor]
+ - Component Refactoring
+ - Note: This is still only supporing the legacy pre-yggdrasil api
+
  [Dependencies::Noteworthy]
  - Moo::Role⁺
  - Module::Build 0.4003 → 0.4203
