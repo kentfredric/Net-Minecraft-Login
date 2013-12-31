@@ -75,7 +75,7 @@ Which we simply split on ':' and store in the respective fields.
 
 =head2 C<current_version>
 
-The timestamp in UnixTime of the most recent Minecraft version ( the game itself, not the launcher )
+The C<timestamp> in C<UnixTime> of the most recent Minecraft version ( the game itself, not the launcher )
 
 =head2 C<download_ticket>
 

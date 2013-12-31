@@ -29,15 +29,15 @@ package Net::Minecraft::Role::HTTP {
 
   has http_engine => ( is => rwp =>, lazy => 1, default => sub { return HTTP::Tiny->new( agent => $_[0]->user_agent ) }, );
 
-}
-
-1;
+};
 BEGIN {
   $Net::Minecraft::Role::HTTP::AUTHORITY = 'cpan:KENTNL';
 }
 {
   $Net::Minecraft::Role::HTTP::VERSION = '0.001001';
 }
+
+1;
 
 __END__
 
@@ -64,21 +64,21 @@ and are offered only to give leverage to strange usecases ( and tests )
     http_engine  => HTTP::Tiny->new(),
   );
 
-=head2 user_agent
+=head2 C<user_agent>
 
 The User Agent to self-describe over HTTP
 
   type    : String
   default : "Net::Minecraft::Login/" . VERSION
 
-=head2 http_headers
+=head2 C<http_headers>
 
 Standard Headers that will be injected in each request
 
   type    : Hash[ string => string ]
   default : { 'Content-Type' => 'application/x-www-form-urlencoded' }
 
-=head2 http_engine
+=head2 C<http_engine>
 
 Low-Level HTTP Transfer Agent.
 
@@ -87,11 +87,11 @@ Low-Level HTTP Transfer Agent.
 
 =head1 ATTRIBUTES
 
-=head2 user_agent
+=head2 C<user_agent>
 
-=head2 http_headers
+=head2 C<http_headers>
 
-=head2 http_engine
+=head2 C<http_engine>
 
 =begin MetaPOD::JSON v1.0.0
 
