@@ -3,7 +3,7 @@ use warnings;
 
 package Net::Minecraft::Role::HTTP {
 
-  # ABSTRACT: Base class for minecrafty http things.
+  # ABSTRACT: Base class for minecraft C<HTTP> things.
 
 
   use Moo::Role;
@@ -47,7 +47,7 @@ __END__
 
 =head1 NAME
 
-Net::Minecraft::Role::HTTP - Base class for minecrafty http things.
+Net::Minecraft::Role::HTTP - Base class for minecraft C<HTTP> things.
 
 =head1 VERSION
 
@@ -56,7 +56,7 @@ version 0.001001
 =head1 CONSTRUCTOR ARGUMENTS
 
 This section describes arguments that may be optionally passed to L<<< C<< ->new() >>|/new >>>, but as of the time of this writing, none are explicitly required,
-and are offered only to give leverage to strange usecases ( and tests )
+and are offered only to give leverage to strange use cases ( and tests )
 
   my $instance = _SOME_CLASS_->new(
     user_agent   => ... ,
