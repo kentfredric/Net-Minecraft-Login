@@ -2,14 +2,6 @@ use v5.16;
 use warnings;
 
 package Net::Minecraft::LoginResult {
-BEGIN {
-  $Net::Minecraft::LoginResult::AUTHORITY = 'cpan:KENTNL';
-}
-
-{
-  $Net::Minecraft::LoginResult::VERSION = '0.001001';
-}
-
 
   # ABSTRACT: Result info for a Minecraft Login.
 
@@ -18,6 +10,7 @@ BEGIN {
   with 'Net::Minecraft::Role::LoginResult';
 
   use Params::Validate qw( validate SCALAR );
+
 
   sub is_success { return 1 }
 
@@ -37,6 +30,12 @@ BEGIN {
   }
 
 };
+BEGIN {
+  $Net::Minecraft::LoginResult::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $Net::Minecraft::LoginResult::VERSION = '0.001001';
+}
 
 1;
 
@@ -44,7 +43,7 @@ __END__
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
@@ -55,6 +54,10 @@ Net::Minecraft::LoginResult - Result info for a Minecraft Login.
 version 0.001001
 
 =head1 METHODS
+
+=head2 is_success
+
+Always returns a truth value for instance of this class.
 
 =head2 parse
 

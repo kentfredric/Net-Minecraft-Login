@@ -1,6 +1,6 @@
 Release history for Net-Minecraft-Login
 
-0.001001 2013-06-07T08:35:42Z
+0.001001 2013-12-31T01:27:39Z
  [Dependencies::Added / develop requires]
  - Pod::Weaver::Section::AllowOverride
  - Test::CPAN::Changes 0.19

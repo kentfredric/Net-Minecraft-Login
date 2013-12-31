@@ -2,14 +2,6 @@ use v5.16;
 use warnings;
 
 package Net::Minecraft::LoginFailure {
-BEGIN {
-  $Net::Minecraft::LoginFailure::AUTHORITY = 'cpan:KENTNL';
-}
-
-{
-  $Net::Minecraft::LoginFailure::VERSION = '0.001001';
-}
-
 
   # ABSTRACT: Result info for a Minecraft Login.
 
@@ -19,6 +11,7 @@ BEGIN {
   use Carp qw( confess );
   use Params::Validate qw( validate SCALAR );
   use overload q{""} => 'as_string';
+
 
   sub is_success { return; }
 
@@ -44,6 +37,12 @@ BEGIN {
     confess q[parameter is not a scalar] if ref $_[0];
   }
 };
+BEGIN {
+  $Net::Minecraft::LoginFailure::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $Net::Minecraft::LoginFailure::VERSION = '0.001001';
+}
 
 1;
 
@@ -51,7 +50,7 @@ __END__
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
@@ -83,6 +82,10 @@ The Reason given by the server for a Login Failure.
 	type : String
 
 =head1 METHODS
+
+=head2 is_success
+
+Always returns a false value for instances of this class.
 
 =head2 as_string
 

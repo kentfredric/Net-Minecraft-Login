@@ -2,14 +2,6 @@ use v5.16;
 use warnings;
 
 package Net::Minecraft::Login {
-BEGIN {
-  $Net::Minecraft::Login::AUTHORITY = 'cpan:KENTNL';
-}
-
-{
-  $Net::Minecraft::Login::VERSION = '0.001001';
-}
-
 
   # ABSTRACT: Basic implementation of the Minecraft Login Protocol.
 
@@ -58,13 +50,19 @@ BEGIN {
     return Net::Minecraft::LoginResult->parse( $result->{content} );
   }
 };
+BEGIN {
+  $Net::Minecraft::Login::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $Net::Minecraft::Login::VERSION = '0.001001';
+}
 1;
 
 __END__
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
@@ -86,7 +84,7 @@ This is a basic implementation of the Minecraft Login protocol as described at L
     user => 'Bob',
     password => 'secret',
   );
-  if( $result->isa('Net::Minecraft::LoginFailure') ){
+  if( not $result->is_success ){
     die $result;
   }
   say "Login for user " . $result->user . " succeeded";
@@ -146,7 +144,7 @@ Mojang Minecraft Launchers will be required to download a newer version, and use
     password => 'jellybean',
   );
 
-  if( $result->isa('Net::Minecraft::LoginFailure') ){
+  if( not $result->is_success ){
     say "$result";
   } else {
     say "Logged in!";
