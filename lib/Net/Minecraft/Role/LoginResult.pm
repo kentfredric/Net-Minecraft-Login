@@ -19,6 +19,6 @@ package Net::Minecraft::Role::LoginResult {
   use Moo::Role;
 
   requires 'is_success';
-}
+};
 
 1;

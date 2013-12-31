@@ -80,6 +80,6 @@ Low-Level HTTP Transfer Agent.
 
   has http_engine => ( is => rwp =>, lazy => 1, default => sub { return HTTP::Tiny->new( agent => $_[0]->user_agent ) }, );
 
-}
+};
 
 1;
