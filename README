@@ -22,13 +22,13 @@ DESCRIPTION
       }
       say "Login for user " . $result->user . " succeeded";
 
-    Note, it presently does no explict session stuff, only performs the
+    Note, it presently does no explicit session stuff, only performs the
     basic HTTP Request and returns the response as an object.
 
 CONSTRUCTOR ARGUMENTS
     This section describes arguments that may be optionally passed to
     "->new()", but as of the time of this writing, none are explicitly
-    required, and are offered only to give leverage to strange usecases (
+    required, and are offered only to give leverage to strange use cases (
     and tests )
 
       my $instance = Net::Minecraft::Login->new(
@@ -42,13 +42,13 @@ CONSTRUCTOR ARGUMENTS
     Additional Constructor arguments can also be found in
     "Net::Minecraft::Role::HTTP"
 
-  login_server
+  "login_server"
     HTTP Address to authenticate with.
 
       type  : String
       default : https://login.minecraft.net/
 
-  version
+  "version"
     "Client" version.
 
       type  : String
@@ -59,15 +59,15 @@ CONSTRUCTOR ARGUMENTS
     specified version is out of date.
 
     Mojang Minecraft Launchers will be required to download a newer version,
-    and users of Net::Minecraft::Login will either
+    and users of "Net::Minecraft::Login" will either
 
-    a) Be required to update to a newer Net::Minecraft::Login that supports
-    the newer version and changes that implies
-    b) Assuming no Login Protocol Changes, only have to specify "version =>"
-    either to the constructor, or as an argument to "login"
+    a) Be required to update to a newer "Net::Minecraft::Login" that
+    supports the newer version and changes that implies
+    b) Assuming no "Login Protocol" Changes, only have to specify "version
+    =>" either to the constructor, or as an argument to "login"
 
 METHODS
-  login
+  "login"
       signature: { user => String , password => String, version? => String }
       return   : Any( Net::Minecraft::LoginResult , Net::Minecraft::LoginFailure )
 
@@ -85,10 +85,10 @@ METHODS
     See "::LoginFailure" and "::LoginResult"
 
 ATTRIBUTES
-  login_server
-  version
+  "login_server"
+  "version"
 PRIVATE METHODS
-  _do_request
+  "_do_request"
       signature : ( String $base_uri, Hash[ String => String ] $parameters , Hash[ String => Any ] $config )
       return    : Hash[ String => String ]
 

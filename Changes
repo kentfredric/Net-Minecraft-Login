@@ -1,9 +1,10 @@
 Release history for Net-Minecraft-Login
 
-0.001001 2013-12-31T01:36:09Z
+0.001001 2013-12-31T01:54:31Z
  [Dependencies::Noteworthy]
  - Moo::Role⁺
- - Module::Build 0.4003 → 0.4005
+ - Module::Build 0.4003 → 0.4203
+ - Test::More 0.98 → 1.001002
 
  [Dependencies::Stats]
  - Dependencies changed since 0.001000, see Changes.deps{,.all,.dev} for
