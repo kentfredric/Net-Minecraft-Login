@@ -28,7 +28,7 @@ This is a basic implementation of the Minecraft Login protocol as described at L
     user => 'Bob',
     password => 'secret',
   );
-  if( $result->isa('Net::Minecraft::LoginFailure') ){
+  if( not $result->is_success ){
     die $result;
   }
   say "Login for user " . $result->user . " succeeded";
@@ -124,7 +124,7 @@ Mojang Minecraft Launchers will be required to download a newer version, and use
     password => 'jellybean',
   );
 
-  if( $result->isa('Net::Minecraft::LoginFailure') ){
+  if( not $result->is_success ){
     say "$result";
   } else {
     say "Logged in!";

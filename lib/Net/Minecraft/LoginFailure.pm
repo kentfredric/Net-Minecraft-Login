@@ -12,6 +12,12 @@ package Net::Minecraft::LoginFailure {
   use Params::Validate qw( validate SCALAR );
   use overload q{""} => 'as_string';
 
+=method is_success
+
+Always returns a false value for instances of this class.
+
+=cut
+
   sub is_success { return; }
 
 =begin MetaPOD::JSON v1.0.0

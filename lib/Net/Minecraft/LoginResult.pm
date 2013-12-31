@@ -11,6 +11,12 @@ package Net::Minecraft::LoginResult {
 
   use Params::Validate qw( validate SCALAR );
 
+=method is_success
+
+Always returns a truth value for instance of this class.
+
+=cut
+
   sub is_success { return 1 }
 
 =begin MetaPOD::JSON v1.0.0
