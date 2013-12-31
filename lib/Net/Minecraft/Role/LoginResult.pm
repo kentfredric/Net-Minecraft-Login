@@ -3,7 +3,7 @@ use warnings;
 
 package Net::Minecraft::Role::LoginResult {
 
-  # ABSTRACT: Generic login result role
+  # ABSTRACT: Generic Login result role
 
 =begin MetaPOD::JSON v1.1.0
 

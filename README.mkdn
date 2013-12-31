@@ -23,12 +23,12 @@ This is a basic implementation of the Minecraft Login protocol as described at [
     }
     say "Login for user " . $result->user . " succeeded";
 
-Note, it presently does no explict session stuff, only performs the basic HTTP Request and returns the response as an object.
+Note, it presently does no explicit session stuff, only performs the basic HTTP Request and returns the response as an object.
 
 # CONSTRUCTOR ARGUMENTS
 
 This section describes arguments that may be optionally passed to [`->new()`](#new), but as of the time of this writing, none are explicitly required,
-and are offered only to give leverage to strange usecases ( and tests )
+and are offered only to give leverage to strange use cases ( and tests )
 
     my $instance = Net::Minecraft::Login->new(
       user_agent   => ... ,
@@ -40,14 +40,14 @@ and are offered only to give leverage to strange usecases ( and tests )
 
 Additional Constructor arguments can also be found in [`Net::Minecraft::Role::HTTP`](https://metacpan.org/pod/Net::Minecraft::Role::HTTP)
 
-## login\_server
+## `login_server`
 
 HTTP Address to authenticate with.
 
     type  : String
     default : https://login.minecraft.net/
 
-## version
+## `version`
 
 "Client" version.
 
@@ -56,14 +56,14 @@ HTTP Address to authenticate with.
 
 This field indicates the version of the "Launcher". Minecraft may at some future time produce an updated launcher, and indicate that this specified version is out of date.
 
-Mojang Minecraft Launchers will be required to download a newer version, and users of Net::Minecraft::Login will either
+Mojang Minecraft Launchers will be required to download a newer version, and users of `Net::Minecraft::Login` will either
 
-- a) Be required to update to a newer Net::Minecraft::Login that supports the newer version and changes that implies
-- b) Assuming no Login Protocol Changes, only have to specify `version =>` either to the constructor, or as an argument to ["login"](#login)
+- a) Be required to update to a newer `Net::Minecraft::Login` that supports the newer version and changes that implies
+- b) Assuming no `Login Protocol` Changes, only have to specify `version =>` either to the constructor, or as an argument to ["login"](#login)
 
 # METHODS
 
-## login
+## `login`
 
     signature: { user => String , password => String, version? => String }
     return   : Any( Net::Minecraft::LoginResult , Net::Minecraft::LoginFailure )
@@ -83,13 +83,13 @@ See [`::LoginFailure`](https://metacpan.org/pod/Net::Minecraft::LoginFailure) an
 
 # ATTRIBUTES
 
-## login\_server
+## `login_server`
 
-## version
+## `version`
 
 # PRIVATE METHODS
 
-## \_do\_request
+## `_do_request`
 
     signature : ( String $base_uri, Hash[ String => String ] $parameters , Hash[ String => Any ] $config )
     return    : Hash[ String => String ]
@@ -97,7 +97,8 @@ See [`::LoginFailure`](https://metacpan.org/pod/Net::Minecraft::LoginFailure) an
 {
     "namespace":"Net::Minecraft::Login",
     "inherits":"Moo::Object",
-    "does":"Net::Minecraft::Role::HTTP"
+    "does":"Net::Minecraft::Role::HTTP",
+    "interface":"class"
 }
 
 

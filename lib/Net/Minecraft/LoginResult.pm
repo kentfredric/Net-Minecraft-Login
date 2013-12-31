@@ -11,7 +11,7 @@ package Net::Minecraft::LoginResult {
 
   use Params::Validate qw( validate SCALAR );
 
-=method is_success
+=method C<is_success>
 
 Always returns a truth value for instance of this class.
 
@@ -30,23 +30,23 @@ Always returns a truth value for instance of this class.
 
 =end MetaPOD::JSON
 
-=attr current_version
+=attr C<current_version>
 
-The timestamp in UnixTime of the most recent Minecraft version ( the game itself, not the launcher )
+The C<timestamp> in C<UnixTime> of the most recent Minecraft version ( the game itself, not the launcher )
 
-=attr download_ticket
+=attr C<download_ticket>
 
 Will always return "deprecated" as this feature is no longer valid.
 
-=attr user
+=attr C<user>
 
 The Case Corrected form of the supplied user name.
 
-=attr session_id
+=attr C<session_id>
 
 A Unique Session Identifier
 
-=attr unique_id
+=attr C<unique_id>
 
 A (presently unused) unique User Identifier.
 
@@ -58,7 +58,7 @@ A (presently unused) unique User Identifier.
   has session_id      => ( is => rwp =>, required => 1 );
   has unique_id       => ( is => rwp =>, required => 1 );
 
-=method parse
+=method C<parse>
 
 Inflate a L<< C<::LoginResult>|Net::Minecraft::LoginResult >> from a content string supplied by the server.
 
