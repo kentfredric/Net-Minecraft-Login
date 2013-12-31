@@ -2,6 +2,7 @@
 .gitignore
 .perltidyrc
 .travis.yml
+.travis_early_installdeps.master
 Build.PL
 Changes
 Changes.deps

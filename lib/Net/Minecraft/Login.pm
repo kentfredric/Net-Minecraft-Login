@@ -54,7 +54,7 @@ BEGIN {
   $Net::Minecraft::Login::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $Net::Minecraft::Login::VERSION = '0.001001';
+  $Net::Minecraft::Login::VERSION = '0.002000';
 }
 1;
 
@@ -70,7 +70,7 @@ Net::Minecraft::Login - Basic implementation of the Minecraft Login Protocol.
 
 =head1 VERSION
 
-version 0.001001
+version 0.002000
 
 =head1 DESCRIPTION
 

@@ -34,7 +34,7 @@ BEGIN {
   $Net::Minecraft::LoginResult::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $Net::Minecraft::LoginResult::VERSION = '0.001001';
+  $Net::Minecraft::LoginResult::VERSION = '0.002000';
 }
 
 1;
@@ -51,7 +51,7 @@ Net::Minecraft::LoginResult - Result info for a Minecraft Login.
 
 =head1 VERSION
 
-version 0.001001
+version 0.002000
 
 =head1 METHODS
 

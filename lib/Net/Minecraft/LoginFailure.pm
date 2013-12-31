@@ -41,7 +41,7 @@ BEGIN {
   $Net::Minecraft::LoginFailure::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $Net::Minecraft::LoginFailure::VERSION = '0.001001';
+  $Net::Minecraft::LoginFailure::VERSION = '0.002000';
 }
 
 1;
@@ -58,7 +58,7 @@ Net::Minecraft::LoginFailure - Result info for a Minecraft Login.
 
 =head1 VERSION
 
-version 0.001001
+version 0.002000
 
 =head1 CONSTRUCTOR ARGUMENTS
 

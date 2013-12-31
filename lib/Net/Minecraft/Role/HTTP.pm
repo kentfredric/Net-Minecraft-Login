@@ -34,7 +34,7 @@ BEGIN {
   $Net::Minecraft::Role::HTTP::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $Net::Minecraft::Role::HTTP::VERSION = '0.001001';
+  $Net::Minecraft::Role::HTTP::VERSION = '0.002000';
 }
 
 1;
@@ -51,7 +51,7 @@ Net::Minecraft::Role::HTTP - Base class for Minecraft C<HTTP> things.
 
 =head1 VERSION
 
-version 0.001001
+version 0.002000
 
 =head1 CONSTRUCTOR ARGUMENTS
 

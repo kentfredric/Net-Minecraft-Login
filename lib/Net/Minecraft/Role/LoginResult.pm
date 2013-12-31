@@ -14,7 +14,7 @@ BEGIN {
   $Net::Minecraft::Role::LoginResult::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $Net::Minecraft::Role::LoginResult::VERSION = '0.001001';
+  $Net::Minecraft::Role::LoginResult::VERSION = '0.002000';
 }
 
 1;
@@ -31,7 +31,7 @@ Net::Minecraft::Role::LoginResult - Generic Login result role
 
 =head1 VERSION
 
-version 0.001001
+version 0.002000
 
 =begin MetaPOD::JSON v1.1.0
 

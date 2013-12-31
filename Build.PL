@@ -18,7 +18,7 @@ my %module_build_args = (
     "Kent Fredric <kentnl\@cpan.org>"
   ],
   "dist_name" => "Net-Minecraft-Login",
-  "dist_version" => "0.001001",
+  "dist_version" => "0.002000",
   "license" => "perl",
   "module_name" => "Net::Minecraft::Login",
   "recommends" => {},
