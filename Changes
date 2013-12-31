@@ -1,21 +1,19 @@
 Release history for Net-Minecraft-Login
 
 {{$NEXT}}
- [Dependencies::Added / develop requires]
- - Pod::Weaver::Section::AllowOverride
- - Test::CPAN::Changes 0.19
+ [Dependencies::Noteworthy]
+ - Moo::Role⁺
+ - Module::Build 0.4003 → 0.4203
+ - Test::More 0.98 → 1.001002
 
- [Dependencies::Added / runtime requires]
- - Moo::Role
-
- [Dependencies::Changed / build requires]
- - Module::Build 0.4003 → 0.4005
-
- [Dependencies::Changed / configure requires]
- - Module::Build 0.4003 → 0.4005
-
- [Dependencies::Changed / develop suggests]
- - Dist::Zilla::PluginBundle::Author::KENTNL v1.6.0 → v1.7.3
+ [Dependencies::Stats]
+ - Dependencies changed since 0.001000, see Changes.deps{,.all,.dev} for
+   details
+ - build: ↑1
+ - configure: ↑1
+ - develop: +46 -3
+ - runtime: +1
+ - test: ↑1 -2
 
  [Documentation]
  - Added README.mkdn
