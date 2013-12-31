@@ -5,12 +5,13 @@ package Net::Minecraft::Login {
 
   # ABSTRACT: Basic implementation of the Minecraft Login Protocol.
 
-=begin MetaPOD::JSON v1.0.0
+=begin MetaPOD::JSON v1.1.0
 
 {
     "namespace":"Net::Minecraft::Login",
     "inherits":"Moo::Object",
-    "does":"Net::Minecraft::Role::HTTP"
+    "does":"Net::Minecraft::Role::HTTP",
+    "interface":"class"
 }
 
 =end MetaPOD::JSON

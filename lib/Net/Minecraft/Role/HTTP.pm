@@ -5,10 +5,11 @@ package Net::Minecraft::Role::HTTP {
 
   # ABSTRACT: Base class for minecrafty http things.
 
-=begin MetaPOD::JSON v1.0.0
+=begin MetaPOD::JSON v1.1.0
 
 {
-    "namespace":"Net::Minecraft::Role::HTTP"
+    "namespace":"Net::Minecraft::Role::HTTP",
+    "interface":"role"
 }
 
 =end MetaPOD::JSON

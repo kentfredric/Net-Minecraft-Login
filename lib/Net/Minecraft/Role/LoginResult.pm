@@ -5,10 +5,11 @@ package Net::Minecraft::Role::LoginResult {
 
   # ABSTRACT: Generic login result role
 
-=begin MetaPOD::JSON v1.0.0
+=begin MetaPOD::JSON v1.1.0
 
 {
-    "namespace":"Net::Minecraft::Role::LoginResult"
+    "namespace":"Net::Minecraft::Role::LoginResult",
+    "interface":"role"
 }
 
 =end MetaPOD::JSON

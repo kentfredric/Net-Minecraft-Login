@@ -20,12 +20,13 @@ Always returns a false value for instances of this class.
 
   sub is_success { return; }
 
-=begin MetaPOD::JSON v1.0.0
+=begin MetaPOD::JSON v1.1.0
 
 {
     "namespace":"Net::Minecraft::LoginFailure",
     "inherits":"Moo::Object",
-    "does":"Net::Minecraft::Role::LoginResult"
+    "does":"Net::Minecraft::Role::LoginResult",
+    "interface":"class"
 }
 
 =end MetaPOD::JSON
